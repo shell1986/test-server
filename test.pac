@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
   if (shExpMatch(host, '*.anidub.life') || shExpMatch(host, '*.anidub.com')) {
-    return 'SOCKS5 127.0.0.1:1337'
+    return 'HTTPS 172.67.207.173:443'
   } else {
     return 'DIRECT'
   }
