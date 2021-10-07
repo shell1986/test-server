@@ -21,7 +21,8 @@ const hosts = {
 function FindProxyForURL(url, host) {
   for (const [key, values] of Object.entries(hosts)) {
     if (values.includes(host)) {
-      return `HTTP ${ip}:${ports[key]}`
+      const point = `${ip}:${ports[key]}`
+      return `PROXY ${point}, HTTP ${point}, HTTPS ${point}`
     }
   }
 
